@@ -1,0 +1,71 @@
+.add-e3lan{
+    background-color: #f2f2f2;
+    padding: 20px 0 60px;
+
+    .boxs{
+        background-color: #ececec;
+        padding: 30px 20px;
+        border-radius: 25px;
+        box-shadow: 0px 4px 6px #cfcfcf;
+
+        form{
+            margin-bottom: 40px;
+            .form-group{
+                text-align: center;
+                margin-bottom: 20px;
+                label{
+                    color: #f8885d;
+                    margin-bottom: 8px;
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+
+                .form-control, .form-select{
+                    padding: 14px 20px;
+                    border: none;
+                    background-color: #fff;
+                    border-radius: 30px;
+                }
+
+                .text{
+                    display: block;
+                    width: 100%;
+                    resize: none;
+                    padding: 14px 20px;
+                    border: none;
+                    background-color: #fff;
+                    border-radius: 30px;
+                }
+
+                select{
+                    color: #f8885d;
+                    font-size: 20px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .add-e3lan{
+        padding: 20px 0 30px;
+    
+        .boxs{
+            padding: 30px 20px;
+            flex-direction: column-reverse;
+
+            form{
+                .form-group{
+                    label{
+                        font-size: 18px;
+                    }
+    
+                    select{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
