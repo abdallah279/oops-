@@ -6,10 +6,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-// :root{
-//     --main-color: #2d3e50;
-//     --sec-color: #b51d21;
-// }
+
+$box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+$carrot-color:#e67e22;
+$black:#130f40;
 
 body{
     font-family: 'Cairo', sans-serif;
@@ -113,10 +113,18 @@ li{
         color: #fff;
         transition: all .3s ease;
 
-        i{
-            margin-left: 8px;
-            font-size: 24px;
+        &:hover{
+            transform: scale(1.2);
         }
+    }
+    
+    i{
+        margin-left: 8px;
+        color: #fff;
+        font-size: 24px;
+        transition: all .3s ease;
+        cursor: pointer;
+        z-index: 2000;
 
         &:hover{
             transform: scale(1.2);
@@ -139,10 +147,60 @@ li{
             font-size: 16px;
         }
     }
+
+}
+
+.box-info{
+    width: 15rem;
+    position: absolute;
+    top: 83%;
+    right: 1rem;
+    border-radius: 1rem;
+    background: #fff;
+    padding: 2rem;
+    z-index: 1000;
+    display: none;
+    box-shadow: $box-shadow;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: -16px;
+        right: 15px;
+        border-width: 8px;
+        border-color: transparent transparent #fff transparent;
+        border-style: solid;
+    }
+
+    &.active{
+        display: block;
+        animation: fadeIn .4s linear;
+    }
+    
+    .links{
+        li{
+            margin-bottom: 10px;
+
+            a{
+                color: $black;
+                display: block;
+                width: 100%;
+                font-size: 18px;
+                padding: 2px 0;
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover{
+                    color: $carrot-color;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
 }
 
 .header{
-    padding: 60px 0;
+    padding: 120px 0;
     display: flex;
     align-items: center;
     justify-content: center;
