@@ -244,6 +244,12 @@ li{
     }
 }
 
+@media (max-width:767px) {
+    .header{
+        padding: 120px 0 200px;
+    }
+}
+
 .footer{
     padding: 30px 20px;
     background: #cf455c;
